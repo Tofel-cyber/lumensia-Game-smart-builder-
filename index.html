@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lumensia Prototype</title>
+    <link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h1>Lumensia Prototype</h1>
+
+    <!-- Bagian untuk menampilkan status sumber daya -->
+    <div id="status-bar">
+        <p id="uang-display">Uang: 100</p>
+        <p id="material-display">Material: 50</p>
+        <p id="energi-display">Energi: 0/0</p>
+    </div>
+
+    <!-- Bagian untuk tombol-tombol pembangunan -->
+    <div id="build-menu">
+        <button id="build-rumah">Bangun Rumah (10 Material)</button>
+        <button id="build-pembangkit">Bangun Pembangkit (15 Material)</button>
+        <button id="build-pabrik">Bangun Pabrik (20 Mat, 50 Uang)</button>
+    </div>
+
+    <!-- "Kanvas" atau area untuk grid game kita -->
+    <div id="game-grid"></div>
+
+    <!-- Hubungkan file JavaScript kita di bagian paling bawah -->
+    <script src="game.js"></script>
+</body>
+</html>

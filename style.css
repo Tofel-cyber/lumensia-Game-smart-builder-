@@ -1,0 +1,114 @@
+body {
+    font-family: sans-serif;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+#status-bar {
+    display: flex;
+    justify-content: space-around;
+    background-color: #e3e3e3;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+#build-menu {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#game-grid {
+    display: grid;
+    grid-template-columns: repeat(20, 25px);
+    grid-template-rows: repeat(20, 25px);
+    border: 2px solid #333;
+    width: 504px;
+    height: 504px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+.grid-cell {
+    width: 25px;
+    height: 25px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+/* "GAMBAR" KITA DIBUAT DENGAN KODE DI SINI */
+.rumah { 
+    background-color: #3498db; /* Biru */
+    border-radius: 4px; /* Sedikit melengkung sudutnya */
+}
+.pembangkit { 
+    background-color: #f1c40f; /* Kuning */
+    border-radius: 50%; /* Membuatnya menjadi lingkaran */
+}
+.pabrik { 
+    background-color: #a0522d; /* Coklat */
+    border: 3px solid #6d3b1e; /* Memberi bingkai agar terlihat beda */
+}
+/* ======================================= */
+/* ATURAN KHUSUS UNTUK TAMPILAN HP (RESPONSIF) */
+/* ======================================= */
+
+/* Aturan ini hanya berlaku jika lebar layar 600px atau kurang */
+@media (max-width: 600px) {
+    
+    body {
+        padding: 10px; /* Kurangi padding di HP agar tidak terlalu banyak ruang kosong */
+    }
+
+    h1 {
+        font-size: 24px; /* Buat judul lebih kecil */
+    }
+
+    /* Buat status bar menumpuk ke bawah */
+    #status-bar {
+        flex-direction: column; /* Ubah arah dari menyamping menjadi ke bawah */
+        align-items: flex-start; /* Ratakan teks ke kiri */
+        padding: 15px;
+    }
+
+    /* Buat tombol-tombol juga menumpuk ke bawah */
+    #build-menu {
+        display: flex;
+        flex-direction: column;
+    }
+
+    button {
+        margin-bottom: 10px; /* Beri jarak antar tombol */
+    }
+
+    /* Buat grid dan petaknya lebih kecil agar muat di layar */
+    #game-grid {
+        grid-template-columns: repeat(20, 18px);
+        grid-template-rows: repeat(20, 18px);
+        width: 364px; /* Lebar total baru (20 * 18 + 4) */
+        height: 364px; /* Tinggi total baru */
+    }
+
+    .grid-cell {
+        width: 18px;
+        height: 18px;
+    }
+}
